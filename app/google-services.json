@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "721923970890",
+    "project_id": "codefix-c3334",
+    "storage_bucket": "codefix-c3334.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721923970890:android:5caa71b9ecfd62bb8393b3",
+        "android_client_info": {
+          "package_name": "com.example.codefix"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-nogIDwI1aUCmyC0HkGLydGaDETZSxYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
