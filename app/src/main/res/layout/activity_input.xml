@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#121212">
+
+    <EditText
+        android:id="@+id/etCodeInput"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:hint="Paste your code here..."
+        android:gravity="top"
+        android:padding="16dp"
+        android:background="#1F1F1F"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textColorHint="#B0B0B0"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Debug Code"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#007BFF"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>
