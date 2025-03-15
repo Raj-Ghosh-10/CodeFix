@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#121212"> <!-- Dark Background -->
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="debug result"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- User's Input Code -->
+    <TextView
+        android:id="@+id/tvUserCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="user code placeholder"
+        android:textSize="16sp"
+        android:background="#1F1F1F"
+        android:padding="12dp"
+        android:textColor="#B0B0B0"
+        android:gravity="start"
+        android:layout_marginBottom="12dp"
+        android:paddingHorizontal="8dp"/>
+
+    <!-- Debugging Output (Wrapped in ScrollView for Long Text) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#1F1F1F"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/tvDebugResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ai result placeholder"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:gravity="start"/>
+    </ScrollView>
+
+    <!-- Buttons Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <!-- Copy Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCopyResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="copy"
+            android:textSize="16sp"
+            android:backgroundTint="#007BFF"
+            android:textColor="#FFFFFF"
+            android:cornerRadius="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Share Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShareResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="share"
+            android:textSize="16sp"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            android:cornerRadius="8dp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>
