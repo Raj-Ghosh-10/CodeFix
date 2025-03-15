@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#121212">
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/codefixlogo"
+        android:contentDescription="CodeFix Logo"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Start Debugging -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartDebug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_debugging"
+        android:backgroundTint="#007BFF"
+        android:textColor="#FFFFFF"
+        android:cornerRadius="8dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- View History -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="view history"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        android:cornerRadius="8dp"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Settings -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open settings"
+        android:backgroundTint="#1E88E5"
+        android:textColor="#FFFFFF"
+        android:cornerRadius="8dp"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>
