@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="#121212">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/debug_date_time"
+            android:textSize="14sp"
+            android:textColor="#B0B0B0"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvDebugTimestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="#1E1E1E"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_code"
+            android:textSize="14sp"
+            android:textColor="#B0B0B0"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@id/tvCodeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="#2C2C2C"
+            android:minHeight="120dp"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/debugged_code"
+            android:textSize="14sp"
+            android:textColor="#B0B0B0"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@id/tvCodeDebugged"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="#2C2C2C"
+            android:padding="12dp"
+            android:minHeight="120dp"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCopyCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:minWidth="180dp"
+            android:backgroundTint="#007BFF"
+            android:text="@string/copy_debugged_code"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:shapeAppearanceOverlay="@style/RoundedButton"
+            tools:ignore="VisualLintButtonSize" />
+
+
+
+    </LinearLayout>
+</ScrollView>
