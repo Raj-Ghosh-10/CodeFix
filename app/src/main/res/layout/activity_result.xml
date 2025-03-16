@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,7 +12,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="debug result"
+        android:text="@string/debug_result"
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
@@ -24,7 +25,7 @@
         android:id="@+id/tvUserCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="user code placeholder"
+        android:text="@string/user_code_placeholder"
         android:textSize="16sp"
         android:background="#1F1F1F"
         android:padding="12dp"
@@ -39,13 +40,14 @@
         android:layout_height="200dp"
         android:background="#1F1F1F"
         android:padding="12dp"
+        android:fillViewport="true"
         android:layout_marginBottom="12dp">
 
         <TextView
             android:id="@+id/tvDebugResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ai result placeholder"
+            android:text="@string/ai_result_placeholder"
             android:textSize="16sp"
             android:textColor="#FFFFFF"
             android:gravity="start"/>
@@ -57,30 +59,33 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
+        android:weightSum="2"
         android:layout_marginTop="8dp">
 
         <!-- Copy Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCopyResult"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="copy"
+            android:layout_weight="1"
+            android:text="@string/copy"
             android:textSize="16sp"
             android:backgroundTint="#007BFF"
             android:textColor="#FFFFFF"
-            android:cornerRadius="8dp"
+            app:cornerRadius="8dp"
             android:layout_marginEnd="8dp"/>
 
         <!-- Share Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnShareResult"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="share"
+            android:layout_weight="1"
+            android:text="@string/share"
             android:textSize="16sp"
             android:backgroundTint="#FF9800"
             android:textColor="#FFFFFF"
-            android:cornerRadius="8dp"
+            app:cornerRadius="8dp"
             android:layout_marginStart="8dp"/>
     </LinearLayout>
 
