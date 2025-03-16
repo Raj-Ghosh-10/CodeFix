@@ -11,9 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeFix"
-        tools:targetApi="31">
+        tools:targetApi="34">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.DebugDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.InputActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.HistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

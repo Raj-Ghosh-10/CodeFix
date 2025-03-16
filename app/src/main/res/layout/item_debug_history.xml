@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:cardBackgroundColor="#1F1F1F"
+    app:strokeWidth="1dp"
+    app:strokeColor="#333333">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Debug Date & Time -->
+        <TextView
+            android:id="@+id/tvDebugDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feb 15, 2025 - 10:30 AM"
+            android:textSize="12sp"
+            android:textColor="#B0B0B0"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Debugged Code (Short Preview) -->
+        <TextView
+            android:id="@+id/tvDebuggedCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fixed: Missing semicolon at line 5"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp">
+
+            <!-- View Details -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                app:cornerRadius="8dp"
+                android:backgroundTint="#007BFF"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Delete History -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeleteHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                app:cornerRadius="8dp"
+                android:backgroundTint="#FF3D00"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

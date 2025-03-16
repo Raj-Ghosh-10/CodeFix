@@ -1,0 +1,12 @@
+<resources>
+    <item name="tvDebugTimestamp" type="id"/>
+    <item name="tvCodeInput" type="id"/>
+    <item name="tvCodeDebugged" type="id"/>
+    <item name="btnCopyCode" type="id"/>
+    <item name="btnStartDebug" type="id"/>
+    <item name="btnHistory" type="id"/>
+    <item name="btnSettings" type="id"/>
+    <item name="etCodeInput" type="id"/>
+    <item name="btnSubmit" type="id"/>
+    <item name="rvDebugHistory" type="id"/>
+</resources>
