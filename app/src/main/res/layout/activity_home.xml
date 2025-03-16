@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -13,7 +14,8 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:src="@drawable/codefixlogo"
-        android:contentDescription="CodeFix Logo"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         android:layout_marginBottom="20dp"/>
 
     <!-- Start Debugging -->
@@ -24,7 +26,7 @@
         android:text="@string/start_debugging"
         android:backgroundTint="#007BFF"
         android:textColor="#FFFFFF"
-        android:cornerRadius="8dp"
+        app:cornerRadius="8dp"
         android:layout_marginTop="16dp"/>
 
     <!-- View History -->
@@ -32,10 +34,10 @@
         android:id="@+id/btnHistory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="view history"
+        android:text="@string/view_history"
         android:backgroundTint="#FF9800"
         android:textColor="#FFFFFF"
-        android:cornerRadius="8dp"
+        app:cornerRadius="8dp"
         android:layout_marginTop="12dp"/>
 
     <!-- Settings -->
@@ -43,10 +45,11 @@
         android:id="@+id/btnSettings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="open settings"
+        android:text="@string/open_settings"
         android:backgroundTint="#1E88E5"
         android:textColor="#FFFFFF"
-        android:cornerRadius="8dp"
+        app:cornerRadius="8dp"
         android:layout_marginTop="12dp"/>
 
 </LinearLayout>
+
