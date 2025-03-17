@@ -9,40 +9,48 @@ import com.example.codefix.databinding.ItemDebugHistoryBinding
 import com.example.codefix.model.DebugHistoryItem
 
 class DebugHistoryAdapter(
-    private val onViewDetails: (DebugHistoryItem) -> Unit,
-    private val onDelete: (String) -> Unit
-) : ListAdapter<DebugHistoryItem, DebugHistoryAdapter.ViewHolder>(DiffCallback) {
+    private val onDeleteClick: (DebugHistoryItem) -> Unit,
+    private val onViewDetailsClick: (DebugHistoryItem) -> Unit
+) : ListAdapter<DebugHistoryItem, DebugHistoryAdapter.DebugHistoryViewHolder>(DebugDiffCallback()) {
 
-    inner class ViewHolder(private val binding: ItemDebugHistoryBinding) :
+    inner class DebugHistoryViewHolder(private val binding: ItemDebugHistoryBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: DebugHistoryItem) {
-            binding.tvDebuggedCode.text = item.debuggedCode
-            binding.tvDebugDate.text = item.timestampFormatted()
+        fun bind(history: DebugHistoryItem) {
+            binding.tvDebugDate.text = history.timestampFormatted()
+            binding.tvDebuggedCode.text = history.debuggedCode
 
-            binding.btnViewDetails.setOnClickListener { onViewDetails(item) }
-            binding.btnDeleteHistory.setOnClickListener { onDelete(item.id) }
+            // Handle "View Details" button click
+            binding.btnViewDetails.setOnClickListener {
+                onViewDetailsClick(history)
+            }
+
+            // Handle "Delete" button click
+            binding.btnDeleteHistory.setOnClickListener {
+                onDeleteClick(history)
+            }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ItemDebugHistoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ViewHolder(binding)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DebugHistoryViewHolder {
+        val binding = ItemDebugHistoryBinding.inflate(
+            LayoutInflater.from(parent.context), parent, false
+        )
+        return DebugHistoryViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: DebugHistoryViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
+}
 
-    companion object {
-        private val DiffCallback = object : DiffUtil.ItemCallback<DebugHistoryItem>() {
-            override fun areItemsTheSame(oldItem: DebugHistoryItem, newItem: DebugHistoryItem): Boolean {
-                return oldItem.id == newItem.id
-            }
+// ✅ Efficient DiffUtil for better performance
+class DebugDiffCallback : DiffUtil.ItemCallback<DebugHistoryItem>() {
+    override fun areItemsTheSame(oldItem: DebugHistoryItem, newItem: DebugHistoryItem): Boolean {
+        return oldItem.id == newItem.id
+    }
 
-            override fun areContentsTheSame(oldItem: DebugHistoryItem, newItem: DebugHistoryItem): Boolean {
-                return oldItem == newItem
-            }
-        }
+    override fun areContentsTheSame(oldItem: DebugHistoryItem, newItem: DebugHistoryItem): Boolean {
+        return oldItem == newItem
     }
 }
