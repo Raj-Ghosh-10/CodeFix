@@ -1,19 +1,28 @@
 <resources>
-    <!-- Background Colors -->
-    <color name="colorBackground">#121212</color>
-    <color name="colorCardBackground">#1E1E1E</color>
-    <color name="colorCodeBlock">#2C2C2C</color>
+    <!-- 🎨 Background Colors -->
+    <color name="colorBackground">#121212</color> <!-- Dark background -->
+    <color name="colorCardBackground">#1E1E1E</color> <!-- Darker shade for cards -->
+    <color name="colorCodeBlock">#2C2C2C</color> <!-- Code block background -->
+    <color name="colorOverlay">#66000000</color> <!-- Semi-transparent overlay -->
 
-    <!-- Text Colors -->
-    <color name="colorTextPrimary">#FFFFFF</color>
-    <color name="colorTextSecondary">#A0A0A0</color>
+    <!-- ✍️ Text Colors -->
+    <color name="colorTextPrimary">#FFFFFF</color> <!-- Bright white for primary text -->
+    <color name="colorTextSecondary">#A0A0A0</color> <!-- Grayish for secondary text -->
 
-    <!-- Accent Colors -->
+    <!-- 🎯 Accent Colors -->
     <color name="colorPrimary">#007BFF</color>  <!-- Blue -->
     <color name="colorSecondary">#FF9800</color>  <!-- Orange -->
-    <color name="colorAccent">#1E88E5</color>  <!-- Light Blue -->
+    <color name="colorAccent">#1E88E5</color>  <!-- Light Blue for highlights -->
 
-    <!-- Button Colors -->
+    <!-- 🟢 Button Colors -->
     <color name="colorButtonPrimary">#007BFF</color>
     <color name="colorButtonSecondary">#FF9800</color>
+
+    <!-- ✅ Text on Buttons -->
+    <color name="colorOnPrimary">#FFFFFF</color>  <!-- White text on primary buttons -->
+    <color name="colorOnSecondary">#000000</color>  <!-- Black text on secondary buttons -->
+
+    <!-- 🌊 Ripple Effect Colors -->
+    <color name="colorRipplePrimary">#33FFFFFF</color>  <!-- Light ripple for buttons -->
+    <color name="colorRippleSecondary">#33FF9800</color>  <!-- Orange ripple effect -->
 </resources>
