@@ -32,6 +32,10 @@
     <string name="user_code_placeholder">User code placeholder</string>
     <string name="ai_result_placeholder">AI result placeholder</string>
     <string name="copy">Copy</string>
+    <string name="input_code">Input Code</string>
     <string name="share">Share</string>
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID_HERE</string>
+
+
 
 </resources>
