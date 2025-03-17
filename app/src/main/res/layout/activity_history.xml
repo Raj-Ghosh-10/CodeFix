@@ -7,6 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.HistoryActivity">
 
+    <!-- Progress Bar (Loading Indicator) -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Swipe to Refresh Wrapper -->
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefresh"
         android:layout_width="match_parent"
@@ -14,28 +27,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <!-- RecyclerView for Debug History -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvDebugHistory"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/debug_history_list"/>
-
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
+    <!-- Empty State Message -->
     <TextView
         android:id="@+id/tvEmptyMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/debug_history_list"
+        android:text="No debug history available"
         android:visibility="gone"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
+        android:layout_margin="20dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.5"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
