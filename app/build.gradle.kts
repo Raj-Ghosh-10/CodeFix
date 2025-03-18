@@ -1,4 +1,4 @@
-import java.util.Properties  // ✅ Ensure correct import
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.android.application)
@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.codefix"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -25,11 +25,10 @@ android {
         if (localPropertiesFile.exists()) {
             properties.load(localPropertiesFile.inputStream())
         }
-        val apiKey = properties.getProperty("GEMINI_API_KEY", "")
+        val hfApiKey = properties.getProperty("HUGGINGFACE_API_KEY", "")
 
-        buildConfigField("String", "GEMINI_API_KEY", "\"${apiKey}\"")
+        buildConfigField("String", "HUGGINGFACE_API_KEY", hfApiKey.let { "\"$it\"" }) // ✅ Corrected
     }
-
 
     buildFeatures {
         viewBinding = true
@@ -39,7 +38,7 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
-            isShrinkResources = true // ✅ Use "isShrinkResources" in Kotlin DSL
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -57,7 +56,6 @@ android {
     }
 }
 
-
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -67,15 +65,15 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.androidx.credentials)
 
-    // ✅ Use Firebase BoM for Auto Sync
-    implementation(platform("com.google.firebase:firebase-bom:33.10.0")) // 🔄 Auto-manages Firebase versions
+    // ✅ Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-firestore-ktx")
 
     // ✅ Google Sign-In
     implementation("com.google.android.gms:play-services-auth:21.3.0")
 
-    // ✅ Material Components (Latest)
+    // ✅ Material Components
     implementation("com.google.android.material:material:1.12.0")
 
     // ✅ Swiperefresh Layout
@@ -85,12 +83,14 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
-    // ✅ Retrofit (If Needed)
+    // ✅ Retrofit (For API Calls)
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+    // ✅ Gson (For JSON Parsing)
+    implementation("com.google.code.gson:gson:2.10.1")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
-
