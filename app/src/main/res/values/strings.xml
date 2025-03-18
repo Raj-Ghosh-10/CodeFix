@@ -35,6 +35,23 @@
     <string name="input_code">Input Code</string>
     <string name="share">Share</string>
     <string name="default_web_client_id">YOUR_WEB_CLIENT_ID_HERE</string>
+    <string name="gemini_api_key">YOUR_API_KEY_HERE</string>
+
+
+
+
+        <string name="api_key_missing">⚠️ API Key is missing. Please check your `strings.xml` file.</string>
+        <string name="no_code_provided">⚠️ No code provided.</string>
+        <string name="debugging_in_progress">🔄 Debugging in progress...</string>
+        <string name="error_fetching_ai">❌ Error fetching AI response.</string>
+        <string name="no_valid_response">⚠️ No valid response from AI.</string>
+        <string name="parsing_error">⚠️ Failed to parse AI response.</string>
+        <string name="copied_to_clipboard">📋 Copied to clipboard!</string>
+        <string name="share_debug_result">📤 Share Debug Result</string>
+
+
+
+
 
 
 
