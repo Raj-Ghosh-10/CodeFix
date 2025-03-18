@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"/>
 
+    <!-- ✅ Ensure Internet permission for API calls -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -13,43 +14,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeFix"
+        android:usesCleartextTraffic="true"
         tools:targetApi="34">
-        <activity
-            android:name=".ui.SignInActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ui.DebugDetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.ResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.InputActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.HistoryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.SettingsActivity"
-            android:exported="true" />
+        <!-- ✅ Main Launcher Activity -->
         <activity
             android:name=".ui.HomeActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.MainActivity"
-            android:exported="true" />
+
+        <!-- ✅ Other Activities -->
+        <activity android:name=".ui.SignInActivity" android:exported="true"/>
+        <activity android:name=".ui.MainActivity" android:exported="true"/>
+        <activity android:name=".ui.SettingsActivity" android:exported="true"/>
+        <activity android:name=".ui.DebugDetailsActivity" android:exported="false"/>
+        <activity android:name=".ui.ResultActivity" android:exported="false"/>
+        <activity android:name=".ui.InputActivity" android:exported="false"/>
+        <activity android:name=".ui.HistoryActivity" android:exported="false"/>
+
     </application>
 
 </manifest>
+
